@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff5e85" />
+  <title>MatchTrainer</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-frame">
+
+    <!-- =========== マッチ画面 =========== -->
+    <section id="screen-match" class="screen active">
+      <div class="brand">
+        <h1>MatchTrainer</h1>
+        <p>あなたの好みは？</p>
+      </div>
+
+      <div class="card">
+        <div id="card-avatar" class="card-avatar"></div>
+        <div id="card-name" class="card-name"></div>
+        <div id="card-meta" class="card-meta"></div>
+        <div id="card-bio" class="card-bio"></div>
+        <div id="card-tags" class="card-tags"></div>
+      </div>
+
+      <div class="card-actions">
+        <button id="btn-skip" class="btn-circle skip" aria-label="スキップ">✕</button>
+        <button id="btn-like" class="btn-circle like" aria-label="いいね">♥</button>
+      </div>
+
+      <p class="note">右の ♥ でいいねしてマッチ開始</p>
+    </section>
+
+    <!-- =========== マッチ演出 =========== -->
+    <section id="screen-match-anim" class="screen">
+      <h2>It's a match!</h2>
+      <div class="match-avatar-wrap">
+        <div id="match-avatar" class="avatar match-avatar"></div>
+      </div>
+      <p><span id="match-name"></span>さんとマッチしました！<br />さっそくメッセージを送ってみましょう。</p>
+      <button id="btn-start-chat" class="btn-primary">メッセージを送る</button>
+    </section>
+
+    <!-- =========== チャット画面 =========== -->
+    <section id="screen-chat" class="screen">
+      <header class="app-header">
+        <div class="row">
+          <div id="chat-avatar" class="avatar"></div>
+          <div>
+            <div id="chat-name" class="name"></div>
+            <div style="font-size:11px;color:var(--gray-500)">オンライン</div>
+          </div>
+        </div>
+        <div id="stage-bar" class="stage-bar"></div>
+        <div class="affection">
+          <span>好感度</span>
+          <div class="affection-track">
+            <div id="affection-fill" class="affection-fill"></div>
+          </div>
+          <span id="affection-num">20</span>
+        </div>
+      </header>
+
+      <div id="messages" class="chat-body"></div>
+
+      <div id="typing" class="typing"><span></span><span></span><span></span></div>
+
+      <div id="thought-bubble" class="thought-bubble"></div>
+      <div id="stage-flash" class="stage-flash"></div>
+
+      <div class="composer">
+        <button id="btn-skill" class="btn-skill" title="なに考えてるの？">
+          💭
+          <span id="skill-badge" class="badge">3</span>
+        </button>
+        <textarea id="chat-input" rows="1" placeholder="メッセージを入力…"></textarea>
+        <button id="btn-send" class="btn-send" aria-label="送信">▶</button>
+      </div>
+    </section>
+
+    <!-- =========== エンディング =========== -->
+    <section id="screen-ending" class="screen">
+      <div class="ending-hero">
+        <div id="ending-emoji" class="ending-emoji"></div>
+        <div id="ending-title" class="ending-title"></div>
+        <div id="ending-desc" class="ending-desc"></div>
+      </div>
+
+      <div class="ending-stats">
+        <div class="stat">
+          <div class="label">好感度</div>
+          <div id="ending-stat-score" class="value"></div>
+        </div>
+        <div class="stat">
+          <div class="label">到達ステージ</div>
+          <div id="ending-stat-stage" class="value"></div>
+        </div>
+        <div class="stat">
+          <div class="label">ターン数</div>
+          <div id="ending-stat-turns" class="value"></div>
+        </div>
+      </div>
+
+      <div class="ending-tree-section">
+        <h3>分岐ツリー <span id="ending-progress" class="ending-progress"></span></h3>
+        <div id="ending-tree" class="ending-tree"></div>
+      </div>
+
+      <div class="ending-actions">
+        <button id="btn-retry" class="btn-cta">もう一度挑戦</button>
+        <a href="#" class="btn-cta affiliate" onclick="alert('（MVP デモ）アフィリエイト導線の予定地。Pairs / with / Tinder などへ遷移');return false;">
+          🌷 本物の出会いを試す
+        </a>
+        <button id="btn-home" class="btn-secondary">他のキャラ（ホーム）へ</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

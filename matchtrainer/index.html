@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff5e85" />
+  <meta name="description" content="マッチングアプリの会話を、忖度ないAI相手に練習できるシミュレーター。" />
+  <title>MatchTrainer - マッチングアプリ練習AI</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .lp-hero {
+      text-align: center;
+      padding: 56px 20px 32px;
+      background: linear-gradient(180deg, var(--pink-50) 0%, var(--pink-100) 100%);
+    }
+    .lp-hero .badge-row {
+      font-size: 11px;
+      color: var(--pink-600);
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+    .lp-hero h1 {
+      font-size: 28px;
+      margin: 0;
+      color: var(--gray-900);
+      letter-spacing: 0.02em;
+    }
+    .lp-hero .tag {
+      display: inline-block;
+      background: var(--pink-500);
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .lp-hero .lead {
+      color: var(--gray-700);
+      font-size: 14px;
+      margin: 16px auto 24px;
+      max-width: 360px;
+      line-height: 1.7;
+    }
+    .lp-cta {
+      display: inline-block;
+      background: var(--pink-500);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-md);
+    }
+    .lp-section {
+      padding: 32px 20px;
+    }
+    .lp-section h2 {
+      font-size: 18px;
+      margin: 0 0 16px;
+      color: var(--pink-600);
+    }
+    .lp-feature {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+    .lp-feature .ico {
+      font-size: 26px;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--pink-100);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lp-feature .ttl {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .lp-feature .desc {
+      font-size: 12px;
+      color: var(--gray-700);
+      margin-top: 2px;
+      line-height: 1.6;
+    }
+    .lp-warn {
+      background: #fff8ee;
+      border: 1px solid #ffd9a8;
+      color: #8a5a00;
+      font-size: 12px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin: 0 20px 20px;
+      line-height: 1.6;
+    }
+    .lp-foot {
+      text-align: center;
+      padding: 28px 20px 40px;
+      font-size: 11px;
+      color: var(--gray-500);
+    }
+  </style>
+</head>
+<body>
+  <main class="app-frame">
+    <section class="lp-hero">
+      <div class="badge-row">マッチングアプリ練習AI</div>
+      <h1>MatchTrainer</h1>
+      <p class="lead">
+        マッチ → チャット → デート → 告白までを、<br />
+        忖度ない AI 相手にシミュレーション。<br />
+        既読無視・ブロック・塩対応も忠実に再現します。
+      </p>
+      <a class="lp-cta" href="./app.html">▶ 試してみる</a>
+    </section>
+
+    <div class="lp-warn">
+      ※ 本アプリは練習用シミュレーターです。AI 応答は API キー無しのモード（モック実装）で動作します。
+      実在する個人・サービスとは関係ありません。
+    </div>
+
+    <section class="lp-section">
+      <h2>3 つの体験</h2>
+      <div class="lp-feature">
+        <div class="ico">💬</div>
+        <div>
+          <div class="ttl">リアルな失敗体験</div>
+          <div class="desc">既読無視・ブロック・塩対応など、現実のバッドエンドが用意されています。</div>
+        </div>
+      </div>
+      <div class="lp-feature">
+        <div class="ico">💭</div>
+        <div>
+          <div class="ttl">「なに考えてるの？」スキル</div>
+          <div class="desc">相手の本音を 1 セッション 3 回まで覗ける。失敗の理由が見える化されます。</div>
+        </div>
+      </div>
+      <div class="lp-feature">
+        <div class="ico">🌳</div>
+        <div>
+          <div class="ttl">分岐エンディング</div>
+          <div class="desc">グッド・バッド合わせて 9 種以上。クリア後は未踏ルートが見えてリプレイ欲を刺激。</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="lp-foot">
+      © MatchTrainer (MVP demo) — All AI responses are mock data.
+    </div>
+  </main>
+</body>
+</html>
